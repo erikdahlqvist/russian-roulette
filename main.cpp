@@ -21,6 +21,7 @@ void continueGame() {
     }
     if (conGame == "n" | conGame == "N") {
         cout << "Your score: " << score << endl;
+	_Exit(0);
     }
     else {
         continueGame();

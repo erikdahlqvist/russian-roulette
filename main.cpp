@@ -16,10 +16,13 @@ void continueGame() {
     cout << "Want to continue? [y/n]: ";
     cin >> conGame;
 
-    if (conGame == "y" | conGame == "Y") {
+    conGame[0] = ::tolower(conGame[0]);
+    //First letter in String is only one that really matters
+
+    if (conGame == "y") {
         pickNumber();
     }
-    if (conGame == "n" | conGame == "N") {
+    if (conGame == "n") {
         cout << "Your score: " << score << endl;
 	_Exit(0);
     }
